@@ -3,7 +3,6 @@ const express = require('express')
 const app = express()
 const userRouter = express.Router()
 
-
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
@@ -24,7 +23,6 @@ let listaProductos = [
         "id": 1
     }
 ]
-
 
 userRouter.get('/', (req, res) => {
     res.send({ productos: listaProductos})
